@@ -16,7 +16,8 @@ function App() {
   
   const myObj={ 
     name:"Vishu", 
-    age:21,
+    age:21, 
+    phone:1234567890,
   }
 
   return (
