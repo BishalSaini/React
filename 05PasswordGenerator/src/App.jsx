@@ -30,11 +30,12 @@ function App() {
   },[length, numberAllowed, charAllowed, setPassword]);  
 
 
-  const copyPasswordToClipBoard= useCallback(()=>{  
-    passwordRef.current?.select(); 
-    passwordRef.current?.setSelectionRange(0,20);
-    window.navigator.clipboard.writeText(password);
-  }, [password])
+  const copyPasswordToClipBoard = useCallback(() => {
+    passwordRef.current?.select(); // Selects the input element
+    passwordRef.current?.setSelectionRange(0, 20); // Sets the selection range (here, selecting the entire text)
+    window.navigator.clipboard.writeText(password); // Copies the selected text to the clipboard
+  }, [password, passwordRef]);
+  
 
   useEffect(()=>{  //UseEffect is use to trigger the passwordGenerator function whenever there is change on dependencies(len,num,char) this ensure that password is regenerated whenever these setting is updated
     passwordGenerator();
@@ -42,7 +43,7 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-gray-200 flex justify-center items-center">
+    <div className="min-h-screen bg-gray-950 flex justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-96">
         <h1 className="text-4xl text-center text-gray-800 mb-6">Password Generator</h1>
 
