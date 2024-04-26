@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer' 
-import { Outlet } from 'react-router-dom' //Outlet will use this layout as a base and whatever things is there at top and botton(Header and Footer) it will keep it same and in centre the things will chnage 
+import { Outlet } from 'react-router-dom' //Outlet will use this layout as a base and whatever things is there at top and bottom(Header and Footer) it will keep it same and in centre the things will chnage 
 
 
 function Layout() {
