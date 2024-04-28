@@ -7,14 +7,14 @@ function Profile() {
     if (!user) {
         // Displayed when user context is empty (user is not logged in)
         return (
-            <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md text-center">
+            <div className="max-w-md mx-auto mt-8 p-6 bg-blackrounded-lg shadow-md text-center">
                 <h2 className="text-2xl font-semibold mb-4">Please Login</h2>
             </div>
         );
     } else {
         // Displayed when user context contains user data (user is logged in)
         return (
-            <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md text-center">
+            <div className="max-w-md mx-auto mt-8 p-6 bg-black rounded-lg shadow-md text-center">
                 <h2 className="text-2xl font-semibold mb-4">Welcome {user.username}</h2>
             </div>
         );
